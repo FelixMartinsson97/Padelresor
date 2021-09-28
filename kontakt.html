@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genomgång 5 januari</title>
+    <!-- Grund-CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- <link rel="stylesheet" href="./css/theme1.css"> -->
+    <!-- <link rel="stylesheet" href="./css/theme2.css"> -->
+    <link rel="stylesheet" href="./css/theme3.css">
+    <!-- Tablet-CSS -->
+    <link rel="stylesheet" media="(min-width:768px)" href="./css/tablet.css">
+    <!-- Laptop-CSS -->
+    <link rel="stylesheet" media="(min-width:992px)" href="./css/laptop.css">
+    <!-- Desktop-CSS -->
+    <link rel="stylesheet" media="(min-width:1200px)" href="./css/desktop.css">
+    <style>
+    /* Intern CSS */
+    </style>
+</head>
+<body>
+    <div class="site">
+
+        <header class="site-header">
+            <div class="brand">
+                <a class="brand-link" href="index.html"><img src="./images/foretaget-logo-color.png" alt=""></a>
+            </div>
+            <input type="checkbox" id="toggle-menu" class="toggle-menu">
+            <nav class="site-navigation">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="boende.html">Våra boenden</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="om.semesterpadel.html">Om oss</a>
+                    </li>
+                    <li class="menu-item active">
+                        <a href="kontakt.html">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>
+            <label class="toggle-btn" for="toggle-menu">
+                <span class="bars"></span>
+            </label>
+        </header>
+        
+        <main class="site-main">
+
+            <section class="hero contact">
+                <h1>Kontakta oss idag</h1>
+            </section>
+
+            <!-- <section class="bookings">
+                <div id="caleandar"></div>
+            </section> -->
+
+            <div class="container">
+                <form action="action_page.php">
+              
+                  <label for="Fornamn">Förnamn</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Ditt namn..">
+              
+                  <label for="lname">Efternamn</label>
+                  <input type="text" id="lname" name="lastname" placeholder="Ditt Efternamn..">
+              
+                  <label for="Land">Land</label>
+                  <select id="country" name="country">
+                    <option value="Sverige">Sverige</option>
+                    <option value="Norge">Norge</option>
+                    <option value="Danmark">Danmark</option>
+                  </select>
+              
+                  <label for="Ämne">Ämne</label>
+                  <textarea id="subject" name="subject" placeholder="Skriv här.." style="height:200px"></textarea>
+              
+                  <input type="submit" value="Skicka">
+              
+                </form>
+              </div> 
+
+           
+
+            <section class="map">
+                <iframe 
+                    class="google-map"
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2097.2914677789618!2d12.288692215875205!3d58.28725498130638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46453cf70d2533df%3A0x409b13f16fe770b4!2sGarvaregatan%2012B%2C%20461%2031%20Trollh%C3%A4ttan!5e0!3m2!1ssv!2sse!4v1610957728130!5m2!1ssv!2sse" 
+                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </section>
+            
+        </main>
+        <footer class="site-footer">
+
+            <footer class="site-footer">
+
+                <div class="container">
+    
+                    <div class="contact">
+                        <h3>Semesterpadel</h3>
+                        <p> Garvaregatan 12B<br>
+                        46130 Trollhättan</p>
+    
+                    </div>
+    
+                    <div class="socials">
+                        <ul class="social-links">
+                            <a href="https://facebook.com"><i class="fab fa-facebook-f"></i> Facebook</a>
+                            <a href="https://instagram.com"><i class="fab fa-instagram"></i> Instagram</a>
+                            <a href="https://linkedin.com"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                        </ul>
+                    </div>
+    
+                </div>
+    
+            </footer>
+        </footer>
+    
+        <script src="./js/caleandar.js"></script>
+        <script>
+            var events = [
+                    {'Date': new Date('7 january, 2021'), 'Title': 'Doctor appointment at 3:25pm.'},
+                    {'Date': new Date('january 9, 2021'), 'Title': 'New Garfield movie comes out!', 'Link': 'https://garfield.com'},
+                    {'Date': new Date(2021, 1, 27), 'Title': '25 year anniversary', 'Link': 'https://www.google.com.au/#q=anniversary+gifts'},
+                ];
+
+            var settings = {
+                    Color: '',
+                    LinkColor: '',
+                    NavShow: true,
+                    NavVertical: false,
+                    NavLocation: '',
+                    DateTimeShow: true,
+                    DateTimeFormat: 'yyyy-mm-dd',
+                    DatetimeLocation: '',
+                    EventClick: '',
+                    EventTargetWholeDay: true,
+                    // DisabledDays: [],
+                    // ModelChange: model
+                };
+
+            var element = document.getElementById('caleandar');
+
+                caleandar(element, events, settings);
+
+
+        </script>
+        
+    </div>
+</body>
+</html>
